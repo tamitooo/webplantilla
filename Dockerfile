@@ -1,6 +1,2 @@
-FROM python:3-slim
-WORKDIR /programas/api-students
-RUN pip3 install flask
-COPY . .
-RUN python3 db.py
-CMD [ "python3", "./app.py" ]
+FROM httpd:2.4
+COPY . /usr/local/apache2/htdocs/
